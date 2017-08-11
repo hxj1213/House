@@ -24,7 +24,7 @@ CREATE TABLE t_house(
   houseArea DECIMAL(6,2), -- 房屋面积
   floor CHAR(3), -- 第几层
   allfloor CHAR(3), -- 共几层
-  houseType VARCHAR(10),-- 住宅类型
+  houseType INT,-- 住宅类型
   direction INT, -- 朝向
   decorate INT, -- 装修情况
   configure VARCHAR(50), -- 房屋配置(电视,空调,.....)

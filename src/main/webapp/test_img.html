@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="static/js/jquery.js"></script>
+
+    <style>
+        .small-img{
+            position: relative;
+            width: 540px;
+            height: 75px;
+        }
+        .small-img a{
+            text-decoration: none;
+            color: #FFFFFF;
+            outline: none;
+        }
+        .small-img a:hover{
+            opacity: 0.7;
+        }
+        .small-img .small-wrap{
+            list-style-type: none;
+            width: inherit;
+            height: inherit;
+            margin: 0;
+            padding: 0;
+        }
+        .small-img .small-item{
+           float: left;
+           margin:0 4px;
+            width: 96px;
+            height: 71px;
+            opacity: 0.5;
+            border: solid 2px transparent;
+        }
+        .small-img .small-item img{
+            width: 96px;
+            height: 71px;
+        }
+        .small-img .basic-imgs-btn{
+            width: 24px;
+            height: 75px;
+            background: #555555;
+            position: absolute;
+            line-height: 75px;
+            top:0;
+            text-align: center;
+        }
+        .small-img .basic-imgs-btn:hover{
+            opacity: 0.7;
+        }
+        .small-img .next{
+            right: 0px;
+        }
+
+        .small-img .active{
+            opacity: 1;
+            border: solid 2px green;
+        }
+    </style>
+
+</head>
+<body>
+
+<div>
+    <img id="pic" src="http://tct3.ganjistatic1.com/gjfsqq/28ac2b9177854a3e9f45ff1057fcaf09_540-405_9-0.jpg">
+</div>
+
+<div class="small-img" >
+    <ul class="small-wrap f-clear" data-role="thumbs" style="left: 0px;">
+        <li class="small-item" data-index="0" data-image="http://tct3.ganjistatic1.com/gjfsqq/28ac2b9177854a3e9f45ff1057fcaf09_540-405_9-0.jpg" data-link="http://tct3.ganjistatic1.com/gjfsqq/28ac2b9177854a3e9f45ff1057fcaf09_600-450_9-0.jpg" data-role="thumb">
+            <a href="javascript:;">
+                <img alt="拎包入住，交通便利，商圈繁华，环境优雅，照片真实" title="拎包入住，交通便利，商圈繁华，环境优雅，照片真实" gjalog="100000002167000100000010" src="http://tct3.ganjistatic1.com/gjfsqq/28ac2b9177854a3e9f45ff1057fcaf09_120-100_9-0.jpg">
+            </a>
+        </li>
+        <li class="small-item" data-index="1" data-image="http://tct3.ganjistatic1.com/gjfsqq/c63cea047b654d2f94f80448a46daed2_540-405_9-0.jpg" data-link="http://tct3.ganjistatic1.com/gjfsqq/c63cea047b654d2f94f80448a46daed2_600-450_9-0.jpg" data-role="thumb">
+            <a href="javascript:;">
+                <img alt="拎包入住，交通便利，商圈繁华，环境优雅，照片真实" title="拎包入住，交通便利，商圈繁华，环境优雅，照片真实" gjalog="100000002167000100000010" src="http://tct3.ganjistatic1.com/gjfsqq/c63cea047b654d2f94f80448a46daed2_120-100_9-0.jpg">
+            </a>
+        </li>
+        <li class="small-item active" data-index="2" data-image="http://tct3.ganjistatic1.com/gjfsqq/db458ac3347b44d5879517a06bae8f2e_540-405_9-0.jpg" data-link="http://tct3.ganjistatic1.com/gjfsqq/db458ac3347b44d5879517a06bae8f2e_600-450_9-0.jpg" data-role="thumb">
+            <a href="javascript:;">
+                <img alt="拎包入住，交通便利，商圈繁华，环境优雅，照片真实" title="拎包入住，交通便利，商圈繁华，环境优雅，照片真实" gjalog="100000002167000100000010" src="http://tct3.ganjistatic1.com/gjfsqq/db458ac3347b44d5879517a06bae8f2e_120-100_9-0.jpg">
+            </a>
+        </li>
+        <li class="small-item" data-index="3" data-image="http://tct3.ganjistatic1.com/gjfsqq/52d406a5efb8475abd6390a18acb6e42_540-405_9-0.jpg" data-link="http://tct3.ganjistatic1.com/gjfsqq/52d406a5efb8475abd6390a18acb6e42_600-450_9-0.jpg" data-role="thumb">
+            <a href="javascript:;">
+                <img alt="拎包入住，交通便利，商圈繁华，环境优雅，照片真实" title="拎包入住，交通便利，商圈繁华，环境优雅，照片真实" gjalog="100000002167000100000010" src="http://tct3.ganjistatic1.com/gjfsqq/52d406a5efb8475abd6390a18acb6e42_120-100_9-0.jpg">
+            </a>
+        </li>
+        <li class="small-item" data-index="4" data-image="http://tct3.ganjistatic1.com/gjfsqq/c4ae46b42d464015816221663c59100f_540-405_9-0.jpg" data-link="http://tct3.ganjistatic1.com/gjfsqq/c4ae46b42d464015816221663c59100f_600-450_9-0.jpg" data-role="thumb">
+            <a href="javascript:;">
+                <img alt="拎包入住，交通便利，商圈繁华，环境优雅，照片真实" title="拎包入住，交通便利，商圈繁华，环境优雅，照片真实" gjalog="100000002167000100000010" src="http://tct3.ganjistatic1.com/gjfsqq/c4ae46b42d464015816221663c59100f_120-100_9-0.jpg">
+            </a>
+        </li>
+    </ul>
+    <div class="basic-imgs-btn prev" data-role="arrow"><a title="" href="#" class="btn-prev">&lt;</a></div>
+    <div class="basic-imgs-btn next" data-role="arrow"><a title="" href="#" class="btn-next">&gt;</a></div>
+</div>
+
+
+<script>
+   $(document).ready(function () {
+
+       var defaultImg = $(".small-img .active").attr('data-image');
+       $("#pic").attr('src',defaultImg)
+
+
+       $(".small-item").mouseover(function () {
+           $(".small-item").each(function () {
+               $(this).removeClass("active");
+           });
+           $(this).addClass("active");
+           var imagesrc = $(this).attr('data-image')
+           $("#pic").attr('src',imagesrc)
+       });
+
+       var imageCount = 5;
+
+       $(".prev").click(function () {
+           var index = $(".small-img .active").attr('data-index');
+           var descIndex = index-1;
+           if(descIndex<0){
+               descIndex+=imageCount;
+           }
+           $(".small-item").each(function () {
+               $(this).removeClass("active");
+           });
+           $(".small-item[data-index='"+descIndex+"']").addClass("active")
+           var imagesrc = $(".small-img .active").attr('data-image');
+           $("#pic").attr('src',imagesrc)
+       })
+
+       $(".next").click(function () {
+           var index = $(".small-img .active").attr('data-index');
+           var descIndex = parseInt(index)+1;
+           if(descIndex>=imageCount){
+               descIndex=imageCount-index-1;
+           }
+           $(".small-item").each(function () {
+               $(this).removeClass("active");
+           });
+           $(".small-item[data-index='"+descIndex+"']").addClass("active")
+           var imagesrc = $(".small-img .active").attr('data-image');
+           $("#pic").attr('src',imagesrc)
+       })
+
+   })
+
+</script>
+
+</body>
+</html>

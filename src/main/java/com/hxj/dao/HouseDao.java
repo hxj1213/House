@@ -6,6 +6,7 @@ import com.hxj.page.PageUtils;
 import org.hibernate.SessionFactory;
 
 import java.io.Serializable;
+import java.util.Map;
 
 /**
  * Created by hxj on 17-8-3.
@@ -37,11 +38,17 @@ public class HouseDao {
        return (House) sessionFactory.getCurrentSession().get(House.class,id);
     }
 
-    public void getByPage(PageBean<House> housePageBean){
-        String columns = " id, houseEstate, address, rentType, room, hall, toilet, houseArea, floor, allfloor, houseType, direction, decorate, configure, price, payType, houseTitle, houseDetail, housepic, userId, linkman, linkphone, intoTime ";
-        String basesql = " select "+columns+" from t_house order by id desc ";
+    public void getByPage(PageBean<Map<String,Object>> housePageBean){
+        String columns = " id, houseEstate,address,room, hall, toilet, houseArea, price, houseTitle, housepic";
+
+        String basesql = " select "+columns+" from t_house where 1=1 ";
+
+        if(housePageBean.getConditions()!=null){
+            basesql+=housePageBean.getConditions();
+        }
+
         System.out.println("basesql:"+basesql);
-        PageUtils.getByPage(sessionFactory.getCurrentSession(),basesql,housePageBean,House.class);
+        PageUtils.getByPage(sessionFactory.getCurrentSession(),housePageBean,basesql);
     }
 
 

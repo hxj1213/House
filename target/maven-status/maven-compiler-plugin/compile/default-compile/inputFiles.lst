@@ -1,0 +1,11 @@
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/entity/User.java
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/page/HouseCondition.java
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/dao/HouseDao.java
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/page/PageBean.java
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/page/Condition.java
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/control/HouseAction.java
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/dao/UserDao.java
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/entity/House.java
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/page/PageUtils.java
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/control/UserAction.java
+/home/hxj/testmaven/hotel/src/main/java/com/hxj/control/UploadAction.java

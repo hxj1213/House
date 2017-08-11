@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping 
+	package="com.hxj.entity">
+	
+	<class name="House" table="t_house">
+		
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="houseEstate"></property>
+        <property name="address" ></property>
+		<property name="rentType"></property>
+		<property name="room"></property>
+		<property name="hall"></property>
+		<property name="toilet"></property>
+		<property name="houseArea"></property>
+		<property name="floor"></property>
+		<property name="allfloor"></property>
+		<property name="houseType"></property>
+		<property name="direction"></property>
+		<property name="decorate"></property>
+		<property name="configure"></property>
+		<property name="price"></property>
+		<property name="payType"></property>
+		<property name="houseTitle"></property>
+		<property name="houseDetail"></property>
+		<property name="housepic"></property>
+		<property name="userId"></property>
+		<property name="linkman"></property>
+		<property name="linkphone"></property>
+		<property name="intoTime"></property>
+	</class>
+
+
+</hibernate-mapping>

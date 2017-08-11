@@ -14,9 +14,16 @@ public class UserDao {
         this.sessionFactory = sessionFactory;
     }
 
-    public void save(User user){
+    public String save(User user){
         System.out.println("------UserDao------save--------");
+        Session session = sessionFactory.getCurrentSession();
+        String login_sql = "select id from User where username=:username";
+        Integer resultUserId =  (Integer) session.createQuery(login_sql).setParameter("username",user.getUsername()).uniqueResult();
+        if(resultUserId!=null){
+            return "repeat";
+        }
         sessionFactory.getCurrentSession().save(user);
+        return "success";
     }
 
     public Integer login(User user){

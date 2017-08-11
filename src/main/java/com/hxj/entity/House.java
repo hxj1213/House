@@ -11,19 +11,19 @@ public class House {
     private int id;
     private String houseEstate; //小区名称
     private String address;
-    private int rentType;
+    private Integer rentType;
     private Integer room;
     private Integer hall;
     private Integer toilet;
     private BigDecimal houseArea;
     private String floor;
     private String allfloor;
-    private String houseType;
-    private Integer direction;
-    private Integer decorate;
+    private Integer houseType;//房屋类型
+    private Integer direction;//朝向
+    private Integer decorate;//装修
     private String configure;
     private Integer price;
-    private Integer payType;
+    private Integer payType;//支付方式
     private String houseTitle;
     private String houseDetail;
     private String housepic;
@@ -56,11 +56,11 @@ public class House {
         this.address = address;
     }
 
-    public int getRentType() {
+    public Integer getRentType() {
         return rentType;
     }
 
-    public void setRentType(int rentType) {
+    public void setRentType(Integer rentType) {
         this.rentType = rentType;
     }
 
@@ -112,11 +112,11 @@ public class House {
         this.allfloor = allfloor;
     }
 
-    public String getHouseType() {
+    public Integer getHouseType() {
         return houseType;
     }
 
-    public void setHouseType(String houseType) {
+    public void setHouseType(Integer houseType) {
         this.houseType = houseType;
     }
 
