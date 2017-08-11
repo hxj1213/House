@@ -85,7 +85,6 @@
             //alert(arr[1]);
             imgPaths.push(arr[1])
         }
-        alert(imgPaths)
         var title = $(".hd").html()
         imageCount = imgPaths.length;
         //(imgPaths.length<=5?imgPaths.length:5)
@@ -111,7 +110,6 @@
     $(document).ready(function () {
 
         var small_wrap = document.getElementById("small-wrap")
-        alert(small_wrap.offsetWidth+"    "+small_wrap.scrollLeft);
 
         var defaultImg = $(".small-img .active").attr('data-image');
         $("#bigpic").attr('src',defaultImg)
@@ -170,7 +168,6 @@
             if(index>=2 && index<(imageCount-2)){
                 small_wrap.scrollLeft+=108;
             }
-            alert(small_wrap.scrollLeft)
         })
 
     })

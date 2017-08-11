@@ -8,7 +8,7 @@
 <%@page language="java" pageEncoding="UTF-8" contentType="text/html;UTF-8" isELIgnored="false" %>
 <div id="loginDiv" style="position:relative;display:none;top:150px;left:380px;width: 400px;height: auto;padding-bottom:30px;box-shadow:1px 1px 15px orange;position: absolute;background: #FFFFFF;z-index: 11111111111">
     <img id="closeLoginDiv" style="cursor:pointer;position:absolute;right: 0" src="${pageContext.request.contextPath}/static/images/close_24px_1181428_easyicon.net.png">
-    <div style="width: 100%;height: 50px;border-bottom: solid 1px orange;line-height: 50px;color: orange;font-size: 18px;font-weight: bolder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登录窗口</div>
+    <div id="loginBar" style="width: 100%;height: 50px;border-bottom: solid 1px orange;line-height: 50px;color: orange;font-size: 18px;font-weight: bolder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登录窗口</div>
     <div>
         <div style="color: red;text-align: center;margin-top:30px" id="loginErrorDiv"></div>
         <form id="loginForm">
@@ -31,7 +31,7 @@
 
 <div id="registerDiv" style="position:relative;display:none;top:150px;left:380px;width: 400px;height: auto;padding-bottom:30px;box-shadow:1px 1px 15px orange;position: absolute;background: #FFFFFF;z-index: 11111111111">
     <img id="closeregisterDiv" style="cursor:pointer;position:absolute;right: 0" src="${pageContext.request.contextPath}/static/images/close_24px_1181428_easyicon.net.png">
-    <div style="width: 100%;height: 50px;border-bottom: solid 1px orange;line-height: 50px;color: orange;font-size: 18px;font-weight: bolder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登录窗口</div>
+    <div id="registerBar" style="width: 100%;height: 50px;border-bottom: solid 1px orange;line-height: 50px;color: orange;font-size: 18px;font-weight: bolder">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登录窗口</div>
     <div>
         <div style="color: red;text-align: center;margin-top:30px" id="registerErrorDiv"></div>
         <form id="registerForm">
@@ -257,4 +257,22 @@
             }
         })
     })
+
+
+
+</script>
+<script src="${pageContext.request.contextPath}/static/js/zxx.drag.1.0.js" type="text/javascript"></script>
+<script type="text/javascript">
+   $("#loginDiv").mousedown(function () {
+       var loBox = document.getElementById("loginDiv");
+       var loBar = document.getElementById("loginBar");
+       startDrag(loBar,loBox);
+   })
+
+   $("#registerDiv").mousedown(function () {
+       var roBox = document.getElementById("registerDiv");
+       var roBar = document.getElementById("registerBar");
+       startDrag(roBar,roBox);
+   })
+
 </script>

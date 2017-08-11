@@ -450,7 +450,6 @@
             success:function (resultData) {
                 //alert("resultData.loginId:"+resultData.loginId)
                 userId = resultData.loginId;
-                alert("添加成功")
             },
             complete:function () {
                 //alert("userId-----------:"+userId);
